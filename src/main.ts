@@ -59,7 +59,7 @@ class mainScene extends Phaser.Scene {
     this.coin.y = Phaser.Math.Between(100, 200);
 
     this.score += 10;
-    this.scoreText.setText("score: " + this.score);
+    this.scoreText.setText(`score: ${this.score}`);
 
     this.tweens.add({
       targets: this.player,
