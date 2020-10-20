@@ -1,0 +1,33 @@
+{
+  "name": "flappy-duck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "copy": "mkdir -p dist && cp -r src/assets src/index.html dist",
+    "dev": "yarn copy && rollup -c -w",
+    "build": "yarn copy && cross-env NODE_ENV=production rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exuanbo/flappy-duck.git"
+  },
+  "author": "exuanbo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exuanbo/flappy-duck/issues"
+  },
+  "homepage": "https://github.com/exuanbo/flappy-duck#readme",
+  "dependencies": {
+    "phaser": "^3.24.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-typescript": "^6.0.0",
+    "cross-env": "^7.0.2",
+    "rollup": "^2.32.0",
+    "rollup-plugin-browsersync": "^1.3.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  }
+}
