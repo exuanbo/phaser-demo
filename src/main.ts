@@ -7,14 +7,14 @@ const sceneConfig: Phaser.Types.Scenes.SettingsConfig = {
   key: "Game",
 };
 
-class mainScene extends Phaser.Scene {
-  player: Phaser.Physics.Arcade.Sprite = undefined as any;
-  coin: Phaser.Physics.Arcade.Sprite = undefined as any;
+class MainScene extends Phaser.Scene {
+  player: Phaser.Physics.Arcade.Sprite;
+  coin: Phaser.Physics.Arcade.Sprite;
 
-  score: number = undefined as any;
-  scoreText: Phaser.GameObjects.Text = undefined as any;
+  score: number;
+  scoreText: Phaser.GameObjects.Text;
 
-  arrow: CursorKey = undefined as any;
+  arrow: CursorKey;
 
   constructor() {
     super(sceneConfig);
@@ -71,13 +71,13 @@ class mainScene extends Phaser.Scene {
   }
 }
 
-const config: Phaser.Types.Core.GameConfig = {
+const gameConfig: Phaser.Types.Core.GameConfig = {
   width: 700,
   height: 300,
   backgroundColor: "#3498db",
-  scene: mainScene,
+  scene: MainScene,
   physics: { default: "arcade" },
   parent: "game",
 };
 
-new Phaser.Game(config);
+new Phaser.Game(gameConfig);
